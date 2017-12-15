@@ -23,7 +23,7 @@ Or install it yourself as:
 Just include the module in your uploader:
 
     class ImageUploader < CarrierWave::Uploader::Base
-      include CarrierWave::MimetypeFu
+      prepend CarrierWave::MimetypeFu
     end
 
 And now uploaded files' content\_type will be set appropriately, and uploads will automatically be renamed before being passed on to the processors. Given a jpeg file named *test\_1.pdf*, the file will be renamed *test\_1.jpg* before being passed off to normal carrierwave processing.
